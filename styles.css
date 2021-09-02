@@ -1,0 +1,81 @@
+@font-face {
+	font-family: "JuliaMono";
+	src: url("./fonts/juliaMono_regular.woff2");
+}
+
+@font-face {
+	font-family: "Inconsolata";
+	src: url('./fonts/inconsolata_regular.ttf')
+}
+
+html {font-size: 3.3vw;}
+a {text-decoration: none;}
+
+body {
+	font-family: 'Inconsolata';
+	padding: 2vh 6vw;
+}
+
+header {
+	padding: 0;
+	font-family: 'JuliaMono';
+	display: flex;
+	justify-content: space-between;
+}
+
+nav {padding: 0; margin: 0;}
+footer {
+	position: relative;
+	top: 19em;
+}
+
+main {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	position: relative;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0 1rem;
+}
+
+ul.syntax span {font-size: 1rem;}
+span {color: rgba(50, 50, 50, 0.139); font-family: 'Inconsolata';}
+span.curl {
+	font-size: 2rem;
+}
+
+nav li {display: inline; font-size: 1.2rem;}
+nav ul.syntax span {font-size: 0.8rem;}
+#work ul li { margin: 0.8em; }
+nav ul {
+	padding: 0 0.2em;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+section {
+	position: absolute;
+	padding: 1vh;
+	width: fit-content;
+	opacity: 1;
+	transition: opacity 1s;
+}
+
+.inactive {
+	opacity: 0;
+	transition: opacity 1s;
+}
+
+a {
+	color: black;
+	transition: color 1s;
+}
+
+a:hover {
+	color: rgb(94, 167, 11);
+}
+
