@@ -8,12 +8,15 @@
 	src: url('./fonts/inconsolata_regular.ttf')
 }
 
-html {font-size: 3.3vw;}
+html {font-size: 3.5vw;}
 a {text-decoration: none;}
 
 body {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
 	font-family: 'Inconsolata';
-	padding: 2vh 6vw;
+	padding: 1vw 5vw;
 }
 
 header {
@@ -22,18 +25,14 @@ header {
 	display: flex;
 	justify-content: space-between;
 }
+h1 {font-size: 1.8rem;}
 
 nav {padding: 0; margin: 0;}
-footer {
-	position: relative;
-	top: 19em;
-}
 
 main {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	position: relative;
 }
 
 ul {
@@ -41,20 +40,18 @@ ul {
 	padding: 0 1rem;
 }
 
-ul.syntax span {font-size: 1rem;}
+ul.syntax span {font-size: 1em;}
 span {color: rgba(50, 50, 50, 0.139); font-family: 'Inconsolata';}
-span.curl {
-	font-size: 2rem;
-}
+
 
 nav li {display: inline; font-size: 1.2rem;}
 nav ul.syntax span {font-size: 0.8rem;}
 #work ul li { margin: 0.8em; }
 nav ul {
-	padding: 0 0.2em;
+	padding: 0;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 
 section {
@@ -77,5 +74,33 @@ a {
 
 a:hover {
 	color: rgb(94, 167, 11);
+}
+
+@media screen and (min-width: 950px) {
+	html {font-size: 2vw;}
+	
+}
+
+@media screen and (min-width: 800px) and (max-width: 949px) {
+	html {font-size: 2.5vw;}
+}
+
+@media screen and (min-width: 700px) and (max-width: 799px) {
+	html {font-size: 2.9vw;}
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: rgb(41, 41, 41);
+	}
+	body * {
+		color: white;
+	}
+	span {
+		color: rgb(58, 58, 58);
+	}
+	a:hover {
+		color: rgb(254, 107, 107);
+	}
 }
 
