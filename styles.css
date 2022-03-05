@@ -12,12 +12,26 @@ html {font-size: 3.5vw;}
 a {text-decoration: none;}
 
 body {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
 	font-family: 'Inconsolata';
 	padding: 1vw 5vw;
+	background-size: cover;
 }
+
+
+
+
+
+main {
+	position: relative;
+}
+
+
+
+
 
 header {
 	padding: 0;
@@ -44,6 +58,9 @@ ul.syntax span {font-size: 1em;}
 span {color: rgba(50, 50, 50, 0.139); font-family: 'Inconsolata';}
 
 
+
+
+
 nav li {display: inline; font-size: 1.2rem;}
 nav ul.syntax span {font-size: 0.8rem;}
 #work ul li { margin: 0.8em; }
@@ -60,6 +77,8 @@ section {
 	width: fit-content;
 	opacity: 1;
 	transition: opacity 1s;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .inactive {
