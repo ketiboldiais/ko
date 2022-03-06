@@ -12,17 +12,17 @@ for (let link of links) {
                 link.classList.toggle('current')
 				setTimeout(function () {
 					section.style.display = "block";
-				}, 110);
+				}, 201);
 				setTimeout(function () {
 					section.style.opacity = "100%";
-				}, 300);
+				}, 400);
 			} else {
 				setTimeout(function () {
 					section.style.display = "none";
-				}, 100);
+				}, 200);
 				setTimeout(function () {
 					section.style.opacity = "0%";
-				}, 800);
+				}, 400);
 			}
 		}
 	});
