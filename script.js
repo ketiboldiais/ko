@@ -13,7 +13,7 @@ function nextSection() {
 					link.classList.toggle("current");
 					setTimeout(function () {
 						section.style.display = "block";
-					}, 15);
+					}, 2);
 					setTimeout(function () {
 						section.style.opacity = "100%";
 					}, 100);
@@ -23,7 +23,7 @@ function nextSection() {
 					}, 100);
 					setTimeout(function () {
 						section.style.display = "none";
-					}, 10);
+					}, 1);
 				}
 			}
 		});
