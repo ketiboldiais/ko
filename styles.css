@@ -1,210 +1,196 @@
-@font-face {
-	font-family: "CMU";
-	src: url("./fonts/mlmr17.ttf");
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: "CMU";
-	src: url("./fonts/mlmbx12.ttf");
-	font-weight: bold;
-	font-style: normal;
-}
+/* Font Imports */
+	@font-face {
+		font-family: "serif";
+		src: url("./fonts/Sabon.ttf");
+		font-weight: normal;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: "serif";
+		src: url("./fonts/mlmbx12.ttf");
+		font-weight: bold;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: "serif";
+		src: url("./fonts/mlmri12.ttf");
+		font-weight: normal;
+		font-style: italic;
+	}
 
-@font-face {
-	font-family: "CMU";
-	src: url("./fonts/mlmri12.ttf");
-	font-weight: normal;
-	font-style: italic;
-}
+	@font-face {
+		font-family: "serif";
+		src: url("./fonts/mlmbxi10.ttf");
+		font-weight: bold;
+		font-style: italic;
+	}
+/* VARIABLES */
+	:root {
+		/* Colors */
+			--red: rgb(233, 100, 76);
+			--black: rgb(58, 58, 58);
+			--white: rgb(252, 252, 252);
+			--blue: rgb(0, 165, 165);
+			--darkModeBlack: rgb(41, 41, 41);
+			--darkModeWhite: rgb(214, 214, 214);
 
-@font-face {
-	font-family: "CMU";
-	src: url("./fonts/mlmbxi10.ttf");
-	font-weight: bold;
-	font-style: italic;
-}
-
-/* Global Styles */
-html {font-size: 18px;}
-body {
-	background-color: rgb(252, 252, 252);
-	padding: 0;
-	margin: 1% 5%;
-	font-family: "CMU", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-	color:rgb(58, 58, 58);
-}
-
-/* Article */
-article {
-	padding: 0;
-	margin: 0;
-	opacity: 1;
-	transition: opacity 1s;
-}
-
-section {
-	display: flex;
-	justify-content: center;
-}
-article#about section {
-	display: block;
-}
-
-.inactive {
-	display: none;
-	opacity: 0;
-	transition: opacity 1s;
-}
-
-/* Paragraphs */
-p {
-	line-height: 1.5;
-	padding: 2% 0;
-	margin:0;
-}
-/* Section */
-section {
-	padding: 0;
-	margin: 0;
-}
-/* Global Styles Lists */
-ul {
-	list-style: none;
-	padding: 0 1em;
-}
-ul li {
-	padding: 0.3em 1em;
-}
-
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	margin: 0;
-}
-h1 {
-	font-size: 2.5em;
-	text-align: center;
-}
-
-/* Text Styling */
-span.italics {
-	font-style: italic;
-}
-
-small {
-	font-size: inherit;
-	font-variant: small-caps;
-}
-
-/* About Section */
-article#about ul {
-	list-style-type: disc;
-	margin: 0 1.1em;
-	padding: 0;
-}
-article#about li::marker {
-	font-size: 0.7em;
-}
-
-/* Projects Section */
-article#projects ul li {
-	padding: 0;
-	margin: 0;
-	margin-bottom: 1em;
-}
-article#projects ul li p {
-	margin: 0;
-	padding: 0;
-}
-
-/* Contact Section */
-article#contact li {
-	font-size: 1.2em;
-}
-
-/* Resume Section */
-article#resume li {
-	font-size: 1.2em;
-}
-
-/* Navigation */
-nav {
-	padding: 0.2em 0;
-	margin: 5% 0;
-	margin-bottom: 3%;
-}
-nav ul {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	margin: 0;
-	padding: 0;
-	font-size: 1.4em;
-}
-nav ul li {
-	margin: 0.2em 0;
-	padding: 0;
-}
-
-nav ul li a {
-	color: rgb(0, 165, 165);
-	text-decoration: none;
-}
-.current {
-	color: rgb(233, 100, 76);
-}
-
-
-/* Links */
-h1 a {
-	text-decoration: none;
-	color: inherit;
-}
-a {
-	color: inherit;
-	transition: color 1s;
-}
-a:hover {
-	color: rgb(233, 100, 76);
-}
-
-
-@media (prefers-color-scheme: dark) {
+		/* Fonts */
+			--serif: "serif", Georgia, 'Times New Roman', Times, serif;
+			--sansSerif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	}
+/* HTML Tag & Box Sizing */
+	html {font-size: 18px;}
+	* {box-sizing: border-box;}
+/* BODY Tag */
 	body {
-		background-color: rgb(41, 41, 41);
-		color: rgb(214, 214, 214);
+		background-color: var(--white);
+		padding: 0;
+		margin: 1% 5%;
+		font-family: var(--serif);
+		color: var(--black);
+	}
+/* NAVIGATION */
+	nav {
+		padding: 0.2em 0;
+		margin: 5% 0;
+		margin-bottom: 3%;
+	}
+	nav ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin: 0;
+		padding: 0;
+		font-size: 1.4em;
+	}
+	nav ul li {
+		margin: 0.2em 0;
+		padding: 0;
 	}
 	nav ul li a {
+		color: var(--blue);
 		text-decoration: none;
 	}
-}
-
-@media screen and (min-width: 381px) and (max-width: 950px) {
-	html {
-		font-size: 16px;
+	.current {color: var(--red);}
+/* ARTICLE Tags */
+	article {
+		padding: 0;
+		margin: 0;
+		opacity: 1;
+		transition: opacity 1s;
 	}
-	nav ul {
-		justify-content: space-between;
-		align-items: center;
-		font-size: 1.1em;
+	
+	/*
+	 * The inactive class is used to toggle the different pages' visibility. 
+	 * See script.js
+	 */
+	.inactive {
+		display: none;
+		opacity: 0;
+		transition: opacity 1s;
 	}
-	body {
-		margin: 5%;
+/* PARAGRAPH Tags */
+	p {
+		line-height: 1.5;
+		padding: 2% 0;
+		margin:0;
 	}
-}
-
-@media screen and (max-width: 380px) {
-	html {
-		font-size: 13px;
+/* SECTION Tags */
+	section {
+		padding: 0;
+		margin: 0;
+		display: flex; /* Flex-displayed for centering content */
+		justify-content: center;
 	}
-	nav ul {
-		justify-content: space-between;
-		align-items: center;
-		font-size: 1.1em;
+/* UL Tags */
+	ul {
+		list-style: none;
+		padding: 0 1em;
 	}
-	body {
-		margin: 5%;
+	ul li {padding: 0.3em 1em;}
+/* HEADING Tags */
+	h1, h2, h3, h4, h5, h6 {
+		font-family: var(--sansSerif);
+		margin: 0;
 	}
-}
+	h1 {
+		font-size: 2.5em;
+		text-align: center;
+	}
+/* Text Styling */
+	span.italics {font-style: italic;}
+	small {
+		font-size: inherit;
+		font-variant: small-caps;
+	}
+/* Section: About */
+	/* 
+	* About section contains several elements; flex-direction changed to column. */
+	article#about section { 
+		flex-direction: column;
+	}
+	article#about ul {
+		list-style-type: disc;
+		margin: 0 1.1em;
+		padding: 0;
+	}
+	article#about li::marker {
+		font-size: 0.7em;
+	}
+/* Section: Projects */
+	article#projects ul li {
+		padding: 0;
+		margin: 0;
+		margin-bottom: 1em;
+	}
+	article#projects ul li p {
+		margin: 0;
+		padding: 0;
+	}
+/* Section: Contact */
+	/* Contact contains just one line, so font is larger. */
+	article#contact li {font-size: 1.2em;}
+	article#contact section {padding: 1.5em;}
+/* Section: Resume */
+	/* Rsume contains just one line, so font is larger. */
+	article#resume li {font-size: 1.2em;}
+/* Links */
+	h1 a {
+		text-decoration: none; /* Get rid of default underline */
+		color: inherit;
+	}
+	a {
+		color: inherit;
+		transition: color 1s;
+	}
+	a:hover {color: var(--red);}
+/* Media Queries */
+	@media screen and (min-width: 951px) {
+		body {margin: 3% 10%;}
+	}
+	@media screen and (min-width: 381px) and (max-width: 950px) {
+		html {font-size: 16px;}
+		nav ul {
+			justify-content: space-between;
+			align-items: center;
+			font-size: 1.1em;
+		}
+		body {margin: 5%;}
+	}
+	@media screen and (max-width: 380px) {
+		html {font-size: 13px;}
+		nav ul {
+			justify-content: space-between;
+			align-items: center;
+			font-size: 1.1em;
+		}
+		body {margin: 5%;}
+	}
+/* DARK MODE */
+	@media (prefers-color-scheme: dark) {
+		body {
+			background-color: var(--darkModeBlack);
+			color: var(--darkModeWhite);
+		}
+		nav ul li a {text-decoration: none;}
+	}
