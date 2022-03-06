@@ -26,13 +26,13 @@
 }
 
 /* Global Styles */
-html {font-size: 19px}
+html {font-size: 18px;}
 body {
 	background-color: rgb(252, 252, 252);
 	padding: 5% 15%;
 	font-family: "CMU", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
 		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-	color:rgb(80, 80, 80);
+	color:rgb(58, 58, 58);
 }
 
 /* Article */
@@ -40,13 +40,21 @@ article {
 	padding: 0;
 	margin: 0;
 	opacity: 1;
-	transition: opacity 2s;
+	transition: opacity 1s;
+}
+
+section {
+	display: flex;
+	justify-content: center;
+}
+article#about section {
+	display: block;
 }
 
 .inactive {
 	display: none;
 	opacity: 0;
-	transition: opacity 2s;
+	transition: opacity 1s;
 }
 
 /* Paragraphs */
@@ -55,7 +63,8 @@ p {
 }
 /* Section */
 section {
-	padding: 0.2em 0;
+	padding: 0;
+	margin: 0;
 }
 /* Global Styles Lists */
 ul {
@@ -72,13 +81,46 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 }
 h1 {
+	font-size: 2.5em;
 	text-align: center;
+}
+
+/* Text Styling */
+
+span.italics {
+	font-style: italic;
+}
+
+small {
+	font-size: inherit;
+	font-variant: small-caps;
+}
+
+/* About Section */
+article#about ul {
+	list-style-type: disc;
+	margin: 0 1.1em;
+}
+article#about li::marker {
+	font-size: 0.7em;
+}
+
+/* Projects Section */
+article#projects ul li {
+	padding: 0;
+	margin: 0;
+	margin-bottom: 1em;
+}
+article#projects ul li p {
+	margin: 0;
+	padding: 0;
 }
 
 /* Navigation */
 nav {
 	padding: 0.2em 0;
 	margin: 5% 0;
+	margin-bottom: 3%;
 }
 nav ul {
 	display: flex;
@@ -102,7 +144,11 @@ nav ul li a {
 }
 
 
-/* Linkes */
+/* Links */
+h1 a {
+	text-decoration: none;
+	color: inherit;
+}
 a {
 	color: rgb(0, 132, 165);
 	transition: color 1s;
@@ -111,8 +157,8 @@ a:hover, a:visited:hover {
 	color: rgb(233, 100, 76);
 }
 
-main a:visited {
-	color: rgb(142, 142, 165);
+a:visited {
+	color: none;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -135,10 +181,6 @@ main a:visited {
 	}
 	a:hover, a:visited:hover  {
 		color: rgb(178, 231, 128);
-	}
-	
-	main a:visited {
-		color: rgb(175, 175, 201);
 	}
 }
 
