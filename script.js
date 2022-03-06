@@ -17,12 +17,13 @@ for (let link of links) {
 					section.style.opacity = "100%";
 				}, 200);
 			} else {
+                setTimeout(function () {
+					section.style.opacity = "0%";
+				}, 1);
 				setTimeout(function () {
 					section.style.display = "none";
 				}, 10);
-				setTimeout(function () {
-					section.style.opacity = "0%";
-				}, 200);
+				
 			}
 		}
 	});
