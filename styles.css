@@ -60,6 +60,8 @@ article#about section {
 /* Paragraphs */
 p {
 	line-height: 1.5;
+	padding: 2% 0;
+	margin:0;
 }
 /* Section */
 section {
@@ -86,7 +88,6 @@ h1 {
 }
 
 /* Text Styling */
-
 span.italics {
 	font-style: italic;
 }
@@ -100,6 +101,7 @@ small {
 article#about ul {
 	list-style-type: disc;
 	margin: 0 1.1em;
+	padding: 0;
 }
 article#about li::marker {
 	font-size: 0.7em;
@@ -150,43 +152,27 @@ h1 a {
 	color: inherit;
 }
 a {
-	color: rgb(0, 132, 165);
+	color: inherit;
 	transition: color 1s;
 }
-a:hover, a:visited:hover {
+a:hover {
 	color: rgb(233, 100, 76);
 }
 
-a:visited {
-	color: none;
-}
 
 @media (prefers-color-scheme: dark) {
 	body {
 		background-color: rgb(41, 41, 41);
-	}
-	body * {
 		color: rgb(214, 214, 214);
 	}
 	nav ul li a {
-		color: rgb(255, 97, 97);
 		text-decoration: none;
-	}
-	span {
-		color: rgb(58, 58, 58);
-	}
-	a {
-		color: rgb(10, 173, 214);
-		transition: color 1s;
-	}
-	a:hover, a:visited:hover  {
-		color: rgb(178, 231, 128);
 	}
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (min-width: 381px) and (max-width: 950px) {
 	html {
-		font-size: 15px;
+		font-size: 16px;
 	}
 	nav ul {
 		justify-content: space-between;
@@ -194,6 +180,20 @@ a:visited {
 		font-size: 1.1em;
 	}
 	body {
-		padding: 10% 4%;
+		padding: 5vh 4%;
+	}
+}
+
+@media screen and (max-width: 380px) {
+	html {
+		font-size: 13px;
+	}
+	nav ul {
+		justify-content: space-between;
+		align-items: center;
+		font-size: 1.1em;
+	}
+	body {
+		padding: 5vh 4%;
 	}
 }
