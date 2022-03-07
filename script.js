@@ -82,22 +82,26 @@ noteCount();
 */
 function revealFootnote() {
 	const footnoteText = document.querySelectorAll(".fn-text");
+	const BODY = document.querySelector("body");
 	const SUPNoteNumbers = document.querySelectorAll("sup");
 	for (let i = 0; i < SUPNoteNumbers.length; i++) {
-		const noteNumber = document.createElement('sup')
-		noteNumber.textContent = `${i+1} `;
+		let count = i;
+		const noteNumber = document.createElement("sup");
+		noteNumber.textContent = `${i + 1} `;
 		let currentFootNote = footnoteText[i];
-		let currentFootNoteText = currentFootNote.querySelector('span')
+		let currentFootNoteText = currentFootNote.querySelector("span");
 		currentFootNote.insertBefore(noteNumber, currentFootNoteText);
-		SUPNoteNumbers[i].addEventListener("mouseenter", function () {
-			setTimeout(() => {
-				currentFootNote.classList.add("fn-text-visible");
-			}, 1);
-			currentFootNote.style.display = "block";
+		BODY.addEventListener("click", () => {
+			for (let j = 0; j < footnoteText.length; j++) {
+				footnoteText[j].classList.remove("fn-text-visible");
+			}
 		});
-		SUPNoteNumbers[i].addEventListener("mouseleave", function () {
-			currentFootNote.style.display = "none";
-			currentFootNote.classList.remove("fn-text-visible");
+		SUPNoteNumbers[i].addEventListener("click", function (evt) {
+			for (let j = 0; j < footnoteText.length; j++) {
+				footnoteText[j].classList.remove("fn-text-visible");
+			}
+			currentFootNote.classList.toggle("fn-text-visible");
+			evt.stopPropagation();
 		});
 	}
 }
