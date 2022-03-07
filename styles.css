@@ -30,6 +30,9 @@
 			--red: rgb(233, 100, 76);
 			--black: rgb(58, 58, 58);
 			--white: rgb(252, 252, 252);
+			--beige: rgb(204, 60, 34);
+			--gold: firebrick;
+			--darkGold: white;
 			--blue: rgb(0, 165, 165);
 			--darkModeBlack: rgb(41, 41, 41);
 			--darkModeWhite: rgb(214, 214, 214);
@@ -39,11 +42,17 @@
 			--sansSerif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	}
 /* HTML Tag & Box Sizing */
-	html {font-size: 18px;}
-	* {box-sizing: border-box;}
+	html {
+		font-size: 18px;
+	}
+	html, body {
+		height: 96%;
+	}
 /* BODY Tag */
 	body {
 		background-color: var(--white);
+		display: flex;
+		flex-direction: column;
 		padding: 0;
 		margin: 1% 5%;
 		font-family: var(--serif);
@@ -117,6 +126,34 @@
 		font-size: 2.5em;
 		text-align: center;
 	}
+/* SUP tags */
+	li>sup {
+		font-size: 0.7em;
+		color: var(--blue);
+		cursor: pointer;
+	}
+	.fn-text sup {
+		font-size: 0.6em;
+		display: block;
+		float: left;
+		margin-right: 3px;
+		margin-bottom: 10px;
+	}
+	.fn-text span {
+		display: block;
+		font-size: 0.9em;
+	}
+	.fn-text {
+		border-top: solid thin var(--black);
+		padding-top: 0.3em;
+		opacity: 0;
+		transition: opacity 0.5s;
+		display: none;
+	}
+	.fn-text-visible {
+		opacity: 1;
+		transition: opacity 0.5s;
+	}
 /* Text Styling */
 	span.italics {font-style: italic;}
 	small {
@@ -154,6 +191,24 @@
 /* Section: Resume */
 	/* Rsume contains just one line, so font is larger. */
 	article#resume li {font-size: 1.2em;}
+/* Section: Publications */
+	article#publications ul li {
+		padding: 0;
+		margin: 0;
+		margin-bottom: 1em;
+	}
+	article#publications ul li p {
+		margin: 0.2em 0 0 0;
+		padding: 0;
+	}
+/* Footer */
+	main {
+		flex: 1 0 auto;
+	}
+	footer {
+		flex-shrink: 0;
+	}
+
 /* Links */
 	h1 a {
 		text-decoration: none; /* Get rid of default underline */
