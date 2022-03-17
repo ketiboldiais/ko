@@ -47,14 +47,17 @@ function greet() {
 	let hours = date.getHours();
 	let greeting;
 
-	if (hours < 12) {
-		greeting = "Good morning.";
-	} else if (hours >= 12 && hours < 17) {
-		greeting = "Good afternoon.";
+	if (hours < 10) {
+		greeting = "Ungil tutau.";
+	} else if (hours >= 10 && hours < 12) {
+		greeting = "Ungil chodechosong."
+	}
+	else if (hours >= 12 && hours < 17) {
+		greeting = "Ungil sueleb.";
 	} else if (hours >= 17 && hours <= 24) {
-		greeting = "Good evening.";
+		greeting = "Ungil kebesengei.";
 	} else {
-		greeting = "Hello.";
+		greeting = "Alii, ke ua ngarang?";
 	}
 	document.getElementById("greet").textContent = greeting;
 	setTimeout(greet, 60_000);
